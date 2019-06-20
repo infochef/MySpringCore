@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="person" class="com.spring.config.xml.Person" init-method="mycustominitmethod"   destroy-method="mycustomDestroymethod">
+        <property name="id" value="101"></property>
+        <property name="name" value="Rahul"></property>
+        <property name="job" ref="tester"></property>
+    </bean>
+    
+    <bean id="developer" class="com.spring.config.xml.SoftwareDeveloper"></bean>
+    
+    <bean id="tester" class="com.spring.config.xml.SoftwareTester"></bean>
+
+</beans>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="lion" class="com.spring.config.constructor.Lion">
+		<constructor-arg name="id" value="420"></constructor-arg>
+		<constructor-arg name="name" value="Simba"></constructor-arg>
+		<constructor-arg name="gender" value="male"></constructor-arg>
+		<constructor-arg name="eat" ref="eat"></constructor-arg>
+	</bean>
+	
+	<bean id="eat" class="com.spring.config.constructor.Eat"></bean>
+
+</beans>
